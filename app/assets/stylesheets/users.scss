@@ -2,27 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .frame{
-    width: 80%; /*幅*/
-    margin: 30px auto; /*上の位置と中央寄せ*/
-    max-width: 600px; /*最大の幅*/
+    width: 80%;
+    margin: 30px auto;
+    max-width: 600px;
 }
 
 img{
-    width: 80px; /*幅*/
-    height: auto; /*縦横比を維持する高さを自動計算*/
+    width: 80px; 
+    height: auto; 
 }
 
 .box0{
-    text-align: center; /*中央寄せ*/
+    text-align: center;
     
 }
 
 .box1{
-    width: 100%; /*幅*/
-    height: 60px; /*高さ*/
-    margin: 15px 0px; /*領域外のスペース*/
-    background-color: rgb(237, 245, 248); /*背景色*/
-    border-bottom: 2px solid #c2c2c2; /*text1の下線*/
+    width: 100%;
+    height: 60px; 
+    margin: 15px 0px;
+    background-color: rgb(237, 245, 248); 
+    border-bottom: 2px solid #c2c2c2;
     input[type="email"], input[type="password"] {
     border: none;
     width: 80%;
@@ -32,96 +32,96 @@ img{
 
 
 #l_text1{
-    display: block; /*要素の表示形式*/
-    font-size: 14px; /*文字の大きさ*/
-    padding: 5px 10px; /*領域内のスペース*/
+    display: block; 
+    font-size: 14px; 
+    padding: 5px 10px; 
 }
 
 #text1{
-    font-size: 18px; /*文字の大きさ*/
-    padding: 0 0 7px 10px; /*ボックスを大きくする*/
-    width: 100%; /*幅*/
-    background-color: #eee; /*背景色*/
-    border: none; /*外枠の線*/
-    outline: none; /*外枠の線*/
-    border-bottom: 2px solid #c2c2c2; /*text1の下線*/
-    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    font-size: 18px; 
+    padding: 0 0 7px 10px; 
+    width: 100%;
+    background-color: #eee;
+    border: none; 
+    outline: none; 
+    border-bottom: 2px solid #c2c2c2;
+    box-sizing: border-box;
 }
 
 #text1:focus{
-    border-bottom: 2px solid #1B73BA; /*下線の太さと色*/
+    border-bottom: 2px solid #1B73BA;
 }
 
 #l_text2{
-    display: block; /*要素の表示形式*/
-    font-size: 13px; /*文字の大きさ*/
-    padding: 5px 10px; /*領域内のスペース*/
+    display: block;
+    font-size: 13px;
+    padding: 5px 10px; 
 }
 
 #text2{
-    font-size: 18px; /*文字の大きさ*/
-    padding: 2px 0 7px 10px; /*ボックスを大きくする*/
-    width: 100%; /*幅*/
-    background-color: #eee; /*背景色*/
-    border: none; /*外枠の線*/
-    outline: none; /*外枠の線*/
-    border-bottom: 2px solid #c2c2c2; /*text1の下線*/
-    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    font-size: 18px; 
+    padding: 2px 0 7px 10px;
+    width: 100%;
+    background-color: #eee; 
+    border: none; 
+    outline: none; 
+    border-bottom: 2px solid #c2c2c2;
+    box-sizing: border-box; 
 }
 
 #text2:focus{
-    border-bottom: 2px solid #1B73BA; /*下線の太さと色*/
+    border-bottom: 2px solid #1B73BA; 
 }
 
 
 .btn1{
-    position: relative; /*相対位置（topのために必要）*/
-    width:100%; /*幅*/
-    height:50px; /*高さ*/
-    top: 10px; /*上の位置*/
-    color:#fff; /*文字の色*/
-    border:none; /*外枠*/
+    position: relative;
+    width:100%; 
+    height:50px;
+    top: 10px; 
+    color:#fff; 
+    border:none; 
     -webkit-border-radius: 25px;
        -moz-border-radius: 25px;
-            border-radius: 25px; /*角の半径*/
-    background:#1B73BA; /*背景色*/
-    display: block; /*要素の表示形式*/
+            border-radius: 25px; 
+    background:#1B73BA;
+    display: block; 
     -webkit-appearance: none;
-    outline: 0; /*外枠（押した後）*/
-    cursor: pointer; /*カーソル（指のかたち）*/
+    outline: 0; 
+    cursor: pointer;
 }
 .btn1:hover{
-    opacity: 0.8; /*透明度*/
+    opacity: 0.8;
 }
 
 
 a {
-    text-decoration: none; /*下線を消す*/
+    text-decoration: none;
 }
 a:hover{
-    text-decoration: underline; /*下線を引く*/
+    text-decoration: underline; 
 }
 
 p {
-    text-align: center; /*中央寄せ*/
+    text-align: center;
 }
   
 .box-login input[type="submit"] {
 
-    position: relative; /*相対位置（topのために必要）*/
-    width:100%; /*幅*/
-    height:50px; /*高さ*/
-    top: 10px; /*上の位置*/
-    color:#fff; /*文字の色*/
-    border:none; /*外枠*/
+    position: relative; 
+    width:100%; 
+    height:50px; 
+    top: 10px; 
+    color:#fff; 
+    border:none;
     -webkit-border-radius: 25px;
        -moz-border-radius: 25px;
-            border-radius: 25px; /*角の半径*/
-    background:#1B73BA; /*背景色*/
-    display: block; /*要素の表示形式*/
+            border-radius: 25px; 
+    background:#1B73BA; 
+    display: block; 
     -webkit-appearance: none;
-    outline: 0; /*外枠（押した後）*/
-    cursor: pointer; /*カーソル（指のかたち）*/
+    outline: 0; 
+    cursor: pointer;
   }
   
   .box-login input[type="submit"]:hover {

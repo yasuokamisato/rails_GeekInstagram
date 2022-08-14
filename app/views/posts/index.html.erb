@@ -1,3 +1,5 @@
+      <nav><a href="#first-block">投稿一覧</a></nav>
+      <nav><a href="#second-block">いいねTOP3</a></nav>
 
 <% if user_signed_in? %>
 <%= link_to "マイページ", user_path(current_user.id) %>をはじめに編集してください
@@ -6,12 +8,13 @@
 <h4>投稿を検索</h4>
 <div class=search>
  <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
-   <%= text_field_tag :search %>
-   <%= submit_tag '検索する'  %>
+   <%= text_field_tag :search, nil, placeholder: 'タイトルor内容で検索' %>
+   <%= submit_tag '検索する' %>
 <% end %>
 </div>
-<%= link_to "＋新規投稿へ", new_post_path, class:"btn btn-primary ml-4" %>
-
+<%= link_to "＋新規投稿へ", new_post_path, class:"btn btn-primary ml-4 mb-4" %>
+<section id="fiest-block">
+<h5>投稿一覧</h5>
 <% @posts.each do |t| %> 
 <div class="media mr-3 ml-3">
   
@@ -76,3 +79,32 @@
 </div>
 <% end %>
 
+<section id="second-block">
+<h5>いいねランキングTOP3</h5>
+<div class="media mr-3 ml-3">
+  
+
+  <% @rank_posts.each do |t| %>
+  
+  <%= image_tag set_image(t), size: "150×150"%>
+  <div class="media-body">
+    <h5 class="mt-0">    
+    <%= t.user.email %>
+    <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+    <%= t.name %> 
+    </h5>
+    
+    <%= t.body %><br>
+
+        <% t.comments.each do |c| %>
+    <div class="media1">
+      <div class="media-body1">
+        <h6 class="mt-0"></h6>
+            <%= c.user.email unless c.user.blank? %>
+            <br>
+             <%= c.content %>
+      </div> 
+      <%= button_to "コメント削除", comment_path(id: c.id, comment_id: c.id), method: :delete %>   
+</div> 
+<% end %>
+<% end %>

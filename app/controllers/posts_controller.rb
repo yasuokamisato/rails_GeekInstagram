@@ -5,7 +5,7 @@ class PostsController < ApplicationController
         @posts = Post.all.order(id: "DESC")
         search = params[:search]
         @posts = @posts.joins(:user).where("posts.body LIKE ? OR users.name LIKE ?", "%#{search}%", "%#{search}%") if search.present?
-   
+        @rank_posts = Post.all.sort {|a,b| b.gooded_users.count <=> a.gooded_users.count}.first(3)
     end
 
     def new
