@@ -1,0 +1,17 @@
+  <div class="media ml-4 mr-4">  
+    <%= form_for @post do |f| %>
+      <div class="field">
+        <%= f.label :タイトル %><br>
+        <%= f.text_field :name %>
+        <br>
+        <%= f.label :コメント %><br>
+        <%= f.text_area :body %> 
+        <br>
+        <%= f.label :画像 %>
+        <%= f.file_field :image %>
+      </div>
+      <%= f.submit "投稿する" %>
+    <% end %>
+    
+  </div>
+  <%= link_to "TOPページに戻る", posts_path, class:"btn btn-primary ml-4" %>

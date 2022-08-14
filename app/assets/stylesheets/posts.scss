@@ -1,0 +1,43 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.media {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #010707;
+    background: #f5f3f3;/*背景色*/
+    border-top: solid 6px #202323;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+  }
+  .media p {
+    margin: 0; 
+    padding: 0;
+  }
+
+
+    
+
+  
+  .media-body1 {
+    
+    position: relative; 
+    margin: 5px 0 0 0px;
+    padding: 5px 5px;
+    border-radius: 12px;
+    background: #d7ebfe;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  }
+  
+  .media-body1:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 18px; 
+    left: -24px;
+    border: 12px solid transparent;
+    border-right: 12px solid #d7ebfe;
+  }
+  
+.search {
+    padding: 5px 10px;
+}

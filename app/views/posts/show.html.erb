@@ -1,0 +1,59 @@
+
+<div class="card text-center">
+  <div class="card-header">
+    <h4>詳細ページ</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">コメント</h5>
+    <p class="card-text">
+    
+<% @comments.each do |c| %>
+  <div>
+      <%= c.user.email unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+    <% if user_signed_in? %>
+        <% if current_user.already_liked?(c) %>
+          <%= link_to comment_like_path(id: c.id, comment_id: c.id), method: :delete do %>
+              <i class="fas fa-heart"></i><%= c.likes.count %> 
+          <% end %>
+        <% else %>
+          <%= link_to comment_likes_path(id: c.id, comment_id: c.id), method: :post do %>
+              <i class="far fa-heart"></i><%= c.likes.count %>
+          <% end %>
+        <% end %>
+    <% else %>
+     <i class="far fa-heart"></i><%= c.likes.count %>
+    <% end %>
+  </div>
+      <br>
+<% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@post, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+
+
+
+    </p>
+    <%= link_to "編集する", edit_post_path(@post.id) %>
+    <%= link_to "一覧に戻る", posts_path %>
+  </div>
+  <div class="card-footer text-muted">
+    <h4>投稿内容</h4>
+     メール: <%= @post.user.email %><br>
+     名前: <a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><br>
+      <%= image_tag set_image(@post), size: "150×150"%>
+      <%= @post.body %>
+
+  </div>
+</div>
+ 
+
+
+

@@ -1,0 +1,27 @@
+
+<title>ログイン画面</title>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="frame">
+  <div class="box0">
+    <%= image_tag "bird.jpg", class: "rounded-circle", size: "150x150" %>
+    <h3>GeekInstagramにログイン</h3>
+  </div>
+  <div class="box1">
+    <label for="text2" id="l_text2">メールまたはユーザー名</label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  
+  <div class="box1">
+    <label for="text2" id="l_text2">パスワード</label>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+    <div class="box-login">
+      <%= f.submit "ログイン" %>
+    </div>
+    <br>
+  <p>
+  <%= render "users/shared/links" %>
+  </p>
+</div>
+  <% end %>
